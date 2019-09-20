@@ -4,6 +4,7 @@ from django.db import models
 
 class Restaurant( models.Model):
     name = models.CharField(max_length=256)
+    cnpj = models.CharField(max_length=222)
     state = models.CharField(max_length=32)
     city = models.CharField(max_length=256)
     neighborhood = models.CharField(max_length=256)
