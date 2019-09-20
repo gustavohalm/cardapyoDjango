@@ -10,3 +10,4 @@ class Restaurant( models.Model):
     address = models.CharField(max_length=512)
     number = models.CharField(max_length=12)
     cep = models.CharField(max_length=8)
+    owner = models.ForeignKey('auth.User', related_name='restaurants', on_delete=models.CASCADE)
