@@ -25,5 +25,6 @@ class Category(models.Model):
 
 class Product(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='products')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,  related_name='cat_products')
     name = models.CharField(max_length=256)
     price = models.DecimalField(max_digits=8, decimal_places=2)
