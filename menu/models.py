@@ -9,14 +9,14 @@ class Order(models.Model):
     products = models.ManyToManyField('core.Product', related_name='orders_product')
     total = models.DecimalField(max_digits=8, decimal_places=2)
     KITCHEN_CHOICES = (
-        ('cendente', 'pendente'),
+        ('pendente', 'pendente'),
         ('cancelado', 'cancelado'),
         ('pronto', 'pronto')
     )
     kitchen_status = models.CharField( max_length=32, choices=KITCHEN_CHOICES)
 
     TABLE_CHOICES = (
-        ('cendente', 'pendente'),
+        ('pendente', 'pendente'),
         ('cancelado', 'cancelado'),
         ('pronto', 'pronto')
     )
